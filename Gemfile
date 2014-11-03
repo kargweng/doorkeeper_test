@@ -21,6 +21,7 @@ gem 'quiet_assets'
 gem 'simple_form'
 gem 'dotenv-rails'
 gem 'flutie'
+gem 'doorkeeper'
 
 group :development, :test do
   gem 'spring'

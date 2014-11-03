@@ -1,6 +1,9 @@
 - content_for(:page_title, 'Welcome to Magic Connect')
 
 = content_for :body do
+  - if user_signed_in?
+    .container
+      p = "Welcome #{current_user.email}"
   .container
     h1 Home index
 
