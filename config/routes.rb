@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   use_doorkeeper
+
   devise_for :users
+  devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
+  authenticated :admin do
+    root to: "doorkeeper/applications#index", as: :authenticated_admin_root
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
