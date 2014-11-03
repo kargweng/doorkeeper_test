@@ -3,10 +3,10 @@
 This is skeleton app for Rails application with oauth support. It has two kinds of user- User and Admin.
 
 
-User are just normal users of the system where API will expose method to access data that belong to user. Access is control by using OAuth.
+User are just normal users of the system where API will expose method to access data that belong to user. Access is control by using OAuth via Doorkeeper.
 
 
-Admin has access to maintain list of external applications that can make OAuth access to this application.
+Admin has access to maintain list of external applications that can make OAuth access to this application. This functionality is also provided by doorkeeper.
 
 
 
